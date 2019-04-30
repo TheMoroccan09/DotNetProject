@@ -26,6 +26,24 @@ namespace PartialViewTest
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+
+            // AngularJS Libraries
+            bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
+                "~/Scripts/angular.js",
+                "~/Scripts/angular-route.js"
+            ));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/Scripts/App/App.js",
+                "~/Scripts/App/Controllers/HomeController.js",
+                "~/Scripts/App/Controllers/AboutController.js",
+                "~/Scripts/App/Controllers/ContactController.js"
+
+
+            ));
         }
     }
 }
